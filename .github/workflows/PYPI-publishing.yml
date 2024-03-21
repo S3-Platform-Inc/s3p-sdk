@@ -18,13 +18,16 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: "3.11"
-
+      - name: Install Poetry Action
+        # You may pin to the exact commit or the version.
+        # uses: snok/install-poetry@93ada01c735cc8a383ce0ce2ae205a21c415379b
+        uses: snok/install-poetry@v1.3.4
+        with:
+          # The Poetry version to install
+          version: 1.6.1
       - name: build release distributions
         run: |
           # NOTE: put your own distribution build steps here.
-          python install poetry=1.6.1
-          python --version
-          poetry install --no-root
           poetry build
       - name: upload windows dists
         uses: actions/upload-artifact@v4
