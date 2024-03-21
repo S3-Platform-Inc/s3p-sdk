@@ -170,3 +170,43 @@ class TestDocument:
         )
 
         assert testdoc2_copy == testdoc2
+
+    def test_to_logging(self):
+        testdoc = S3PDocument(
+            self.data.get('doc2').get("id"),
+            self.data.get('doc2').get("title"),
+            self.data.get('doc2').get("abstract"),
+            self.data.get('doc2').get("text"),
+            self.data.get('doc2').get("link"),
+            self.data.get('doc2').get("storage"),
+            self.data.get('doc2').get("other"),
+            self.data.get('doc2').get("published"),
+            self.data.get('doc2').get("loaded"),
+        )
+
+        string_for_logging = (f"S3P document | ID\'s: {self.data.get('doc2').get('id')} "
+                              f"| name: {self.data.get('doc2').get('title')} "
+                              f"| link to web: {self.data.get('doc2').get('link')} "
+                              f"| publication date: {self.data.get('doc2').get('published')}")
+
+        assert string_for_logging == testdoc.to_logging
+
+    def test_to_logging_without_id(self):
+        testdoc = S3PDocument(
+            None,
+            self.data.get('doc2').get("title"),
+            self.data.get('doc2').get("abstract"),
+            self.data.get('doc2').get("text"),
+            self.data.get('doc2').get("link"),
+            self.data.get('doc2').get("storage"),
+            self.data.get('doc2').get("other"),
+            self.data.get('doc2').get("published"),
+            self.data.get('doc2').get("loaded"),
+        )
+
+        string_for_logging = (f"S3P document "
+                              f"| name: {self.data.get('doc2').get('title')} "
+                              f"| link to web: {self.data.get('doc2').get('link')} "
+                              f"| publication date: {self.data.get('doc2').get('published')}")
+
+        assert string_for_logging == testdoc.to_logging

@@ -16,3 +16,14 @@ class S3PRefer:
     name: str | None
     type: str | None
     loaded: datetime | None
+
+    @property
+    def to_logging(self) -> str:
+        """
+        General string representation of the S3P document for logging purposes
+        :return:
+        """
+        _id = ''
+        if self.id:
+            _id = f' | ID\'s: {self.id}'
+        return f'S3P refer{_id} | name: {self.name} | type: {self.type}'
