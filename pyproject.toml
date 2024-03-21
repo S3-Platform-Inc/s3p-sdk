@@ -8,7 +8,7 @@ authors = [
 readme = "README.md"
 classifiers = [
     "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: GNU-3.0 License",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
 ]
 license = "GPL-3.0-or-later"
 repository = "https://github.com/CuberHuber/S3P-SDK"
