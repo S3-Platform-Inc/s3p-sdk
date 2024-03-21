@@ -23,6 +23,13 @@ jobs:
       - name: Build and publish to pypi
         uses: JRubics/poetry-publish@v2.0
         with:
+          python_version: "3.11"
+          poetry_version: "==1.6.1" # (PIP version specifier syntax)
           pypi_token: ${{ secrets.PYPI_TOKEN }}
+          poetry_install_options: "--sync --no-root"
+          poetry_publish_options: "--dry-run"
+          build_format: "sdist"
+          repository_name: "s3p-sdk"
+          package_directory: "S3P-SDK"
 
   
