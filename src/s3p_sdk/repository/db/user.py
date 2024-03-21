@@ -11,7 +11,7 @@ class Users:
     @classmethod
     def auth(cls, telegram_id: int) -> S3PUser:
         """
-
+        Метод для авторизации пользователя в S3P
         """
         assert isinstance(telegram_id, int)
         with ps_connection() as connection:
