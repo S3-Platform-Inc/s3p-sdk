@@ -1,0 +1,29 @@
+name: Upload Python Package
+
+on:
+  push:
+    branches:
+      - release/*
+      - main
+    tags:
+      - "v*.*.*"
+
+jobs:
+  publishing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v3
+        with:
+          python-version: 3.11
+      # - name: Run image
+      #   uses: abatilo/actions-poetry@v2.1.4
+      #   with:
+      #     poetry-version: 1.6.1
+      - name: Build and publish to pypi
+        uses: JRubics/poetry-publish@v2.0
+        with:
+          python_version: "3.11"
+          poetry_version: "==1.6.1" # (PIP version specifier syntax)
+          pypi_token: ${{ secrets.PYPI_TOKEN }}
+          poetry_install_options: "--sync --no-root"
