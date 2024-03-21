@@ -5,9 +5,8 @@ on:
     branches:
       - release/*
       - main
-
-permissions:
-  contents: read
+    tags:
+      - "v*.*.*"
 
 jobs:
   publishing:
