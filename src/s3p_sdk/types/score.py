@@ -8,7 +8,7 @@ if TYPE_CHECKING:
 
 
 @dataclass
-class SppScore:
+class S3PScore:
     """
     id, score, comment, document_id, user_id, role_id, date
     """
