@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "s3p-sdk"
-version = "0.1.2"
+version = "0.2.0"
 description = "A small SDK for simple creating a microservises or plugins for the S3 Platform"
 authors = [
     "Roman Lupashko <romal5754@gmail.com>",

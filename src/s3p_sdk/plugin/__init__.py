@@ -1,3 +1,4 @@
 __all__ = [
-    "payloads"
+    "payloads",
+    "config",
 ]
