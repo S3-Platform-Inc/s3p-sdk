@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "s3p-sdk"
-version = "0.2.0"
+version = "0.2.1"
 description = "A small SDK for simple creating a microservises or plugins for the S3 Platform"
 authors = [
     "Roman Lupashko <romal5754@gmail.com>",
@@ -30,6 +30,7 @@ optional = true
 [tool.poetry.group.test.dependencies]
 mkdocs = "*"
 pytest = "8.1.1"
+selenium = "4.15.2"
 
 [build-system]
 requires = ["poetry-core"]
