@@ -1,7 +1,6 @@
 import dataclasses
 
 from .abc_object import AbcObject
-from .type import SOURCE, FILE, MIXIN
 
 
 @dataclasses.dataclass

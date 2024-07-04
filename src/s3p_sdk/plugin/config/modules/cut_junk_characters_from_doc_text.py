@@ -3,6 +3,7 @@ import dataclasses
 from .abc_module import AbcModuleConfig
 from s3p_sdk.module import CutJunkCharactersFromDocumentText
 
+
 @dataclasses.dataclass
 class CutJunkCharactersFromDocumentTextConfig(AbcModuleConfig):
 

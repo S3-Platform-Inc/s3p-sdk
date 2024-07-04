@@ -1,4 +1,3 @@
-from abc import ABC
 from s3p_sdk.plugin.config import AbcObject
 
 

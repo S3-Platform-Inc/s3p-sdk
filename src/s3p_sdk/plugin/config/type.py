@@ -1,4 +1,3 @@
 
 SOURCE: str = "SOURCE"
-FILE: str = "TYPE"
-MIXIN: str = "MIXIN"
+ML: str = "ML"

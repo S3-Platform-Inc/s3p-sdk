@@ -3,8 +3,8 @@ __all__ = [
 ]
 
 import dataclasses
+
 from .abc_param import AbcParamConfig
-from s3p_sdk.module import names as m_names
 
 
 @dataclasses.dataclass
