@@ -18,7 +18,7 @@ class TestSimpleTimezoneSafeControlModuleConfig:
         test_module: AbcModuleConfig = TimezoneSafeControlConfig(
             order=1,
             is_critical=True,
-            p_fields=['text', ]
+            p_fields=['published', ]
         )
         assert test_module
         assert test_module.dict()
@@ -36,7 +36,7 @@ class TestSimpleTimezoneSafeControlModuleConfig:
         test_module: AbcModuleConfig = TimezoneSafeControlConfig(
             order=1,
             is_critical=True,
-            p_fields=['text', ]
+            p_fields=['loaded', ]
         )
         test_dict = test_module.dict()
         schema_dict = {
@@ -45,7 +45,7 @@ class TestSimpleTimezoneSafeControlModuleConfig:
             'critical': True,
             'params': {
                 "fields": [
-                    'text'
+                    'loaded'
                 ]
             }
         }

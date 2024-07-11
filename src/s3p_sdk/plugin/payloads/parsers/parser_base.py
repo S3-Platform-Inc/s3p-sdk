@@ -1,9 +1,13 @@
+"""Base source payload module"""
 from s3p_sdk.plugin.payloads.parsers.abc_parser_base import AbcS3PParserExtends
 from s3p_sdk.plugin.payloads.payload_base import S3PPayloadBase
 from s3p_sdk.types import S3PDocument, S3PRefer
 
 
 class S3PParserBase(S3PPayloadBase, AbcS3PParserExtends):
+    """
+    Base class for payload of the source plugin
+    """
 
     def __init__(self, refer: S3PRefer, max_documents: int = None, last_document: S3PDocument = None):
         super().__init__(refer)
