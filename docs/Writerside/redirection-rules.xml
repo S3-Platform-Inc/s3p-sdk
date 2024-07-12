@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rules SYSTEM "https://resources.jetbrains.com/writerside/1.0/redirection-rules.dtd">
+<rules>
+    <!-- format is as follows
+    <rule id="<unique id>">
+        <accepts>page.html</accepts>
+    </rule>
+    -->
+    <rule id="61a6b7d9">
+        <description>Created after removal of "Empty XML Topic" from S3 Platform Plugin SDK</description>
+        <accepts>Empty-XML-Topic.html</accepts>
+    </rule>
+    <rule id="10d52cb">
+        <description>Created after removal of "Home" from S3 Platform Plugin SDK</description>
+        <accepts>Home.html</accepts>
+    </rule>
+    <rule id="5abddaff">
+        <description>Created after removal of "How to" from S3 Platform Plugin SDK</description>
+        <accepts>How-to.html</accepts>
+    </rule>
+    <rule id="48af781f">
+        <description>Created after removal of "Topic title" from S3 Platform Plugin SDK</description>
+        <accepts>How-to2.html</accepts>
+    </rule>
+    <rule id="2f1d3276">
+        <description><![CDATA[Created after removal of "<Tutorial.md>" from S3 Platform Plugin SDK]]></description>
+        <accepts>Tutorial.html</accepts>
+    </rule>
+    <rule id="178dbb4a">
+        <description>Created after removal of "Required Experience" from S3 Platform Plugin SDK</description>
+        <accepts>Required-Experience.html</accepts>
+    </rule>
+    <rule id="594ed0fc">
+        <description>Created after removal of "Starter" from S3 Platform Plugin SDK</description>
+        <accepts>starter.html</accepts>
+    </rule>
+</rules>
