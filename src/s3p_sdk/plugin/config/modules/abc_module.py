@@ -1,3 +1,4 @@
+"""Abstract module package"""
 from s3p_sdk.plugin.config import AbcObject
 
 

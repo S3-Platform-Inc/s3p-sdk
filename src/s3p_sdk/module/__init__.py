@@ -1,22 +1,27 @@
+"""
+S3P modules package.
+It consists different modules: its unique name.
+"""
+
 __all__ = [
     'names',
-    'WEBDRIVER',
-    'TIMEZONESAFECONTROL',
+    'WebDriver',
+    'TimezoneSafeControl',
     'CutJunkCharactersFromDocumentText',
     'FilterOnlyNewDocumentWithDB',
-    'SaveDocumentToDB',
+    'SaveDocument',
 ]
 
-WEBDRIVER: str = 'WebDriver'
-TIMEZONESAFECONTROL: str = 'TimezoneSafeControl'
+WebDriver: str = 'WebDriver'
+TimezoneSafeControl: str = 'TimezoneSafeControl'
 CutJunkCharactersFromDocumentText: str = 'CutJunkCharactersFromDocumentText'
 FilterOnlyNewDocumentWithDB: str = 'FilterOnlyNewDocumentWithDB'
-SaveDocumentToDB: str = 'SaveDocumentToDB'
+SaveDocument: str = 'SaveDocumentToDB'
 
 names = (
-    WEBDRIVER,
-    TIMEZONESAFECONTROL,
+    WebDriver,
+    TimezoneSafeControl,
     CutJunkCharactersFromDocumentText,
     FilterOnlyNewDocumentWithDB,
-    SaveDocumentToDB,
+    SaveDocument,
 )

@@ -1,3 +1,4 @@
+"""Modules package"""
 __all__ = [
     'AbcObject',
     'TaskConfig',

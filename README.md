@@ -7,9 +7,9 @@ pip install s3p-sdk
 ```
 
 ## Оглавление
-1. Конфигурация
-2. 
+1. [Конфигурация](docs/config.md)
+2. [Логика](docs/payload.md)
+3. [Сборшик](docs/source-plugin)
 
 ## Пакет
-
-https://pypi.org/project/s3p-sdk/
+Официально пакет представлен в [пакетном репозитории python](https://pypi.org/project/s3p-sdk/)
