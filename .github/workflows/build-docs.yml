@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - patch-*
+      - main
   workflow_dispatch:
 
 permissions:
