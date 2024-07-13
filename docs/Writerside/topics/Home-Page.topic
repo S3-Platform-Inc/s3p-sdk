@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Home" id="Home-Page" help-id="Empty-XML-Topic">
+
+    <section-starting-page>
+        <title>S3 Platform Plugin SDK</title>
+        <description>
+            Расширение функционала S3 Platform при помощи создания плагинов, модулей или микросервисов.
+        </description>
+
+        <spotlight>
+            <a href="Quick-Start-Guide.md"
+               summary="Базовая работа с S3 Platform и создание плагинов" type="start"/>
+            <a href="About-This-Guide.md"
+               summary="Введение и обзор содержимого" type="search"/>
+            ...
+        </spotlight>
+
+        <primary>
+            <title>Начнем</title>
+            <a href="Quick-Start-Guide.md"
+               summary="Базовая работа с S3 Platform и создание плагинов"/>
+            ...
+        </primary>
+
+        <secondary>
+            <title>Requirements</title>
+            <a href="https://github.com/CuberHuber/S3P-SDK"
+               summary="DRAFT"/>
+            ...
+        </secondary>
+
+        <misc>
+            <cards>
+                <title>Custom cards</title>
+                <a href="https://github.com/CuberHuber/S3P-SDK"
+                   summary="DRAFT"/>
+                ...
+            </cards>
+
+            <links narrow="true">
+                <group>
+                    <title>Custom links</title>
+                    <a href="https://github.com/CuberHuber/S3P-SDK"
+                       summary="DRAFT"/>
+                    ...
+                </group>
+                ...
+            </links>
+        </misc>
+    </section-starting-page>
+</topic>

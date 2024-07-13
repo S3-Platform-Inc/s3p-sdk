@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE vars SYSTEM "https://resources.jetbrains.com/writerside/1.0/vars.dtd">
 <vars>
-    <var name="product" value="Writerside"/>
+    <var name="product" value="S3 Platform"/>
+    <var name="prod" value="S3P"/>
+    <var name="p" value="S3 Platform"/>
+    <var name="pl" value="S3 Platform plugin"/>
+    <var name="pls" value="S3 Platform plugins"/>
 </vars>

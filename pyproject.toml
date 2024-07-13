@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "s3p-sdk"
-version = "0.2.3"
+version = "0.2.4"
 description = "A small SDK for simple creating microservises or plugins for the S3 Platform"
 authors = [
     "Roman Lupashko <romal5754@gmail.com>",
@@ -15,7 +15,6 @@ repository = "https://github.com/CuberHuber/S3P-SDK"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-psycopg2-binary = "2.9.9"
 
 [tool.poetry.group.dev]
 optional = true

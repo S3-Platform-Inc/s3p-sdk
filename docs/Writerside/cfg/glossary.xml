@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE terms SYSTEM "https://resources.jetbrains.com/writerside/1.0/glossary.dtd">
+<terms>
+    <term name="GUI">Graphical User Interface</term>
+    <term name="HTTP">Hypertext Transfer Protocol</term>
+    <term name="SCP">Source Collector Plugin</term>
+    <term name="API">Application Programming Interface</term>
+    <term name="IDE">Integrated Development Environment</term>
+</terms>
