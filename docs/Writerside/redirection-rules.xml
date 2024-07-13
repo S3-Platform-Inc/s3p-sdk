@@ -34,4 +34,12 @@
         <description>Created after removal of "Starter" from S3 Platform Plugin SDK</description>
         <accepts>starter.html</accepts>
     </rule>
+    <rule id="5190bba4">
+        <description>Created after removal of "Home" from S3 Platform Plugin SDK
+            Help IDs that are no longer available in build after removal:
+
+            Empty-XML-Topic
+        </description>
+        <accepts>Plugin-Structure.html</accepts>
+    </rule>
 </rules>

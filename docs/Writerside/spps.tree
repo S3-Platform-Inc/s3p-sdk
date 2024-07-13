@@ -17,7 +17,26 @@
             <toc-element topic="Requirements.md"/>
             <toc-element topic="Plugin-Types.md"/>
         </toc-element>
-        <toc-element topic="Developing-a-Plugin.md"/>
+        <toc-element topic="Developing-a-Plugin.md">
+            <toc-element topic="Create-a-Plugin-Python-Project.md">
+                <toc-element topic="Plugin-GitHub-Template.md"/>
+            </toc-element>
+        </toc-element>
+        <toc-element topic="Plugin-Structure.topic">
+            <toc-element topic="Plugin-Content.md"/>
+            <toc-element topic="Plugin-Configuration-file.md"/>
+            <toc-element topic="Plugin-Dependencies.md"/>
+        </toc-element>
         <toc-element topic="Plugin-Development-FAQ.md"/>
     </toc-element>
+    <toc-element toc-title="Base Platform">
+
+    </toc-element>
+    <toc-element toc-title="Project model">
+
+    </toc-element>
+    <toc-element toc-title="Testing">
+
+    </toc-element>
+    <toc-element topic="Rules.md"/>
 </instance-profile>
