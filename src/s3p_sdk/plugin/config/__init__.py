@@ -8,7 +8,6 @@ __all__ = [
     'PluginConfig',
     'modules',
     'payload',
-    'type',
     'trigger'
 ]
 

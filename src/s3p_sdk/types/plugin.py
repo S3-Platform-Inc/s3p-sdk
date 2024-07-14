@@ -18,3 +18,4 @@ class S3PPlugin:
     loaded: datetime | None
     config: dict | None
     type: str
+    version: str | None
