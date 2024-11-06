@@ -2,7 +2,7 @@
 import dataclasses
 
 from .abc_module import AbcModuleConfig
-from s3p_sdk.module import FilterOnlyNewDocumentWithDB
+from s3p_sdk.module import FilterOnlyNewDocumentWithDB as MNAME
 
 
 @dataclasses.dataclass
@@ -16,6 +16,6 @@ class FilterOnlyNewDocumentWithDB(AbcModuleConfig):
         assert isinstance(is_critical, bool)
         assert isinstance(order, int) and order > 0
         self.order = order
-        self.name = FilterOnlyNewDocumentWithDB
+        self.name = MNAME
         self.is_critical = is_critical
         self.parameters = None

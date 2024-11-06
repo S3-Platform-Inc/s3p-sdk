@@ -2,7 +2,7 @@
 import dataclasses
 
 from .abc_module import AbcModuleConfig
-from s3p_sdk.module import SaveDocument as mSaveDocument
+from s3p_sdk.module import SaveDocument as MNAME
 
 
 @dataclasses.dataclass
@@ -15,6 +15,6 @@ class SaveDocument(AbcModuleConfig):
         assert isinstance(is_critical, bool)
         assert isinstance(order, int) and order > 0
         self.order = order
-        self.name = mSaveDocument
+        self.name = MNAME
         self.is_critical = is_critical
         self.parameters = None
