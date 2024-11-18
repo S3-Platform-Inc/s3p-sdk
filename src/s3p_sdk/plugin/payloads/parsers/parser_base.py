@@ -10,6 +10,8 @@ class S3PParserBase(S3PPayloadBase, AbcS3PParserExtends):
     """
 
     def __init__(self, refer: S3PRefer, max_documents: int = None, last_document: S3PDocument = None):
+        assert max_documents is None or (isinstance(max_documents, int) and max_documents > 0), \
+            "max_documents must be positive integer or None value"
         super().__init__(refer)
         self._parsed_document = []
         self._max_documents = max_documents
@@ -33,10 +35,10 @@ class S3PParserBase(S3PPayloadBase, AbcS3PParserExtends):
         A method of checking that the number of documents has exceeded the maximum number or the found document is
         equal to the last document
         """
-        if self._last_document and self._last_document.hash == document.hash:
+        if self._last_document is not None and self._last_document.hash == document.hash:
             raise Exception(f"Find already existing document ({self._last_document.to_logging})")
 
-        if self._max_documents and len(self._parsed_document) >= self._max_documents:
+        if self._max_documents is not None and len(self._parsed_document) >= self._max_documents:
             raise Exception(f"Max count articles reached ({self._max_documents})")
 
         self._parsed_document.append(document)
