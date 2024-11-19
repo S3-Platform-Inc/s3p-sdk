@@ -15,8 +15,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.ui import WebDriverWait
 
+from s3p_sdk.plugin.config.type import SOURCE
 from s3p_sdk.plugin.payloads.parsers import S3PParserBase
-from s3p_sdk.types import S3PRefer, S3PDocument
+from s3p_sdk.types import S3PRefer, S3PDocument, S3PPlugin
 
 
 class TestParserMaker:
@@ -27,7 +28,7 @@ class TestParserMaker:
 
         def __init__(self, refer: S3PRefer, webdriver: WebDriver, url: str, max_count_documents: int = None,
                      last_document: S3PDocument = None):
-            super().__init__(refer, max_count_documents, last_document)
+            super().__init__(refer, S3PPlugin(None, "1", True, None, None, SOURCE), max_count_documents, last_document)
             self._driver = webdriver
             self._wait = WebDriverWait(self._driver, timeout=20)
             if url:
