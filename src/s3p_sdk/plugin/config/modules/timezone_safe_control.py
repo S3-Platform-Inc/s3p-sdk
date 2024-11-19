@@ -2,7 +2,7 @@
 import dataclasses
 
 from .abc_module import AbcModuleConfig
-from s3p_sdk.module import TimezoneSafeControl
+from s3p_sdk.module import TimezoneSafeControl as MNAME
 
 
 @dataclasses.dataclass
@@ -14,7 +14,7 @@ class TimezoneSafeControlConfig(AbcModuleConfig):
         assert isinstance(order, int) and order > 0
         self._verify(p_fields)
         self.order = order
-        self.name = TimezoneSafeControl
+        self.name = MNAME
         self.is_critical = is_critical
 
         if p_fields:

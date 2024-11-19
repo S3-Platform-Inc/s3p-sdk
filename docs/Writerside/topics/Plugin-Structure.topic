@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Plugin Structure" id="Plugin-Structure">
+
+    <section-starting-page>
+        <title>Plugin Structure</title>
+        <description>
+            Подробнеео структуре плагина, компонентах плагина и его жизненном цикле.
+        </description>
+
+        <spotlight>
+            <a href="Plugin-Configuration-file.md"
+               summary="Детальное описание config.py элементов конфигурационного файла" type="file"/>
+            <a href="Plugin-Dependencies.md"
+               summary="Описание необходимых или необязательных зависимостях в %pls%" type="folder"/>
+            ...
+        </spotlight>
+
+        <primary>
+            <title>Plugin content</title>
+            <a href="Plugin-Content.md"
+               summary="Типы плагинов и их содержимое"/>
+            ...
+        </primary>
+
+        <secondary>
+            <title>Requirements</title>
+            <a href="https://github.com/CuberHuber/S3P-SDK"
+               summary="DRAFT"/>
+            ...
+        </secondary>
+    </section-starting-page>
+</topic>

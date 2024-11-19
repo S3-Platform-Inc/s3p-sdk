@@ -2,9 +2,8 @@ name: Upload Python Package
 
 on:
   push:
-    branches:
-      - release/*
-      - main
+#    branches:
+#      - main
     tags:
       - "v*.*.*"
 

@@ -1,5 +1,5 @@
 from s3p_sdk.plugin.config import CoreConfig
-from s3p_sdk.plugin.config.type import SOURCE
+from s3p_sdk.plugin.types import SOURCE
 
 
 class TestSimpleCoreConfig:
