@@ -1,6 +1,9 @@
+import pytest
+
 from s3p_sdk.plugin.config.modules import CutJunkCharactersFromDocumentTextConfig
 
 
+@pytest.mark.config_set
 class TestCutJunkCharactersFromDocumentTextConfig:
     NAME = 'CutJunkCharactersFromDocumentText'
 

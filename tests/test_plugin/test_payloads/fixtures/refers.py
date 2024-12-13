@@ -1,7 +1,7 @@
 import pytest
 
 from s3p_sdk.types import S3PRefer
-from s3p_sdk.plugin.config.type import SOURCE, ML
+from s3p_sdk.plugin.types import SOURCE, ML
 
 
 def refers(_type: str) -> S3PRefer:

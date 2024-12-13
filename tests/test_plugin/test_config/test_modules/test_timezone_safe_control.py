@@ -1,6 +1,9 @@
+import pytest
+
 from s3p_sdk.plugin.config.modules import TimezoneSafeControlConfig
 
 
+@pytest.mark.config_set
 class TestTimezoneSafeConfig:
 
     def test_init(self):

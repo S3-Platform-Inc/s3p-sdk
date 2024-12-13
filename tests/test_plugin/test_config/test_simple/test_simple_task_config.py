@@ -1,8 +1,11 @@
 import datetime
 
+import pytest
+
 from s3p_sdk.plugin.config import TaskConfig, trigger
 
 
+@pytest.mark.config_set
 class TestSimpleTaskConfig:
 
     def test_init(self):

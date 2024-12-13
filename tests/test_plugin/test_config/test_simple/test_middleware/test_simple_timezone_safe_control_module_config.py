@@ -1,9 +1,12 @@
 import datetime
 
+import pytest
+
 from s3p_sdk.plugin.config.modules import AbcModuleConfig, TimezoneSafeControlConfig, \
     CutJunkCharactersFromDocumentTextConfig
 
 
+@pytest.mark.config_set
 class TestSimpleTimezoneSafeControlModuleConfig:
 
     def test_minimal_init(self):

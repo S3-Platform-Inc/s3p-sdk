@@ -4,7 +4,7 @@ from abc import ABCMeta, abstractmethod
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from s3p_sdk.types import S3PDocument
+    from s3p_sdk.types import S3PDocument, S3PPluginRestrictions
 
 
 class AbcS3PParserExtends(metaclass=ABCMeta):
@@ -13,8 +13,7 @@ class AbcS3PParserExtends(metaclass=ABCMeta):
     """
 
     _parsed_document: list[S3PDocument]
-    _max_documents: int
-    _last_document: S3PDocument
+    _restriction: S3PPluginRestrictions
 
     @abstractmethod
     def content(self) -> tuple[S3PDocument, ...]:

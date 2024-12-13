@@ -1,3 +1,4 @@
+import pytest
 import datetime
 
 from s3p_sdk.plugin.config import (
@@ -9,6 +10,7 @@ from s3p_sdk.plugin.config import (
     modules,
     payload
 )
+from s3p_sdk.plugin.config.restrictconfig import RestrictionsConfig
 from s3p_sdk.plugin.types import SOURCE
 from s3p_sdk.module import (
     WebDriver,
@@ -16,15 +18,19 @@ from s3p_sdk.module import (
 )
 
 
+@pytest.mark.config_set
 class TestSimpleAllConfig:
 
-    def test_init(self):
+    def test_simple_init(self):
         test_pc = PluginConfig(
             plugin=CoreConfig(
                 reference='ieee',
                 type=SOURCE,
                 files=['ieee.py', ],
-                is_localstorage=False
+                is_localstorage=False,
+                restrictions=RestrictionsConfig(
+                    50, None, None, None
+                )
             ),
             task=TaskConfig(
                 trigger=trigger.TriggerConfig(
@@ -47,7 +53,6 @@ class TestSimpleAllConfig:
                     method='content',
                     params=[
                         payload.entry.ModuleParamConfig(key='driver', module_name=WebDriver, bus=True),
-                        payload.entry.ConstParamConfig(key='max_count_documents', value=50),
                         payload.entry.ConstParamConfig(key='url',
                                                        value='https://ieeexplore.ieee.org/xpl/tocresult.jsp?isnumber=10005208&punumber=6287639&sortType=vol-only-newest'),
                         payload.entry.ConstParamConfig(key='categories', value=[
@@ -72,7 +77,13 @@ class TestSimpleAllConfig:
                 "reference": "ieee",
                 "type": "SOURCE",
                 "filenames": ["ieee.py"],
-                "localstorage": False
+                "localstorage": False,
+                "restrictions": {
+                    "mex_materials": 50,
+                    "last_material": None,
+                    "from_date": None,
+                    "to_date": None,
+                },
             },
             "task": {
                 "trigger": {
@@ -94,7 +105,6 @@ class TestSimpleAllConfig:
                     "point": "content",
                     "params": [
                         {"key": "driver", "value": {"type": "module", "name": "WebDriver", "bus": True}},
-                        {"key": "max_count_documents", "value": {"type": "const", "value": 50}},
                         {"key": "url", "value": {"type": "const",
                                                  "value": "https://ieeexplore.ieee.org/xpl/tocresult.jsp?isnumber"
                                                           "=10005208&punumber=6287639&sortType=vol-only-newest"}},
@@ -125,14 +135,21 @@ class TestSimpleAllConfig:
             reference='ieee',
             type=SOURCE,
             files=['ieee.py', ],
-            is_localstorage=False
+            is_localstorage=False,
+            restrictions=RestrictionsConfig(None, None, None, None)
         )
         test_dict = test_plugin.dict()
         schema_dict = {
             "reference": "ieee",
             "type": "SOURCE",
             "filenames": ["ieee.py"],
-            "localstorage": False
+            "localstorage": False,
+            "restrictions": {
+                "mex_materials": None,
+                "last_material": None,
+                "from_date": None,
+                "to_date": None,
+            },
         }
         print(test_dict)
         print(schema_dict)

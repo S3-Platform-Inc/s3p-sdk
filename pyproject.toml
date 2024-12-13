@@ -1,17 +1,26 @@
 [tool.poetry]
 name = "s3p-sdk"
-version = "0.2.7"
+version = "0.2.8"
 description = "A small SDK for simple creating microservises or plugins for the S3 Platform"
 authors = [
     "Roman Lupashko <romal5754@gmail.com>",
 ]
 readme = "README.md"
 classifiers = [
-    "Programming Language :: Python :: 3",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
     "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 license = "GPL-3.0-or-later"
 repository = "https://github.com/CuberHuber/S3P-SDK"
+documentation = "https://github.com/CuberHuber/S3P-SDK#readme"
+
+keywords = ["s3 platform", "s3p", "sdk", "microservices", "plugins"]
 
 [tool.poetry.dependencies]
 python = "^3.11"

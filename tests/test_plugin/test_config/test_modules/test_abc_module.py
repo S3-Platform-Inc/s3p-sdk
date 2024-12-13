@@ -1,6 +1,9 @@
+import pytest
+
 from s3p_sdk.plugin.config.modules import AbcModuleConfig
 
 
+@pytest.mark.config_set
 class TestAbcModuleConfig:
 
     def _module(self, order, name, is_critical, parameters):
