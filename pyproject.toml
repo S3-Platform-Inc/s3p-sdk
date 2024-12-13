@@ -19,7 +19,6 @@ classifiers = [
 license = "GPL-3.0-or-later"
 repository = "https://github.com/CuberHuber/S3P-SDK"
 documentation = "https://github.com/CuberHuber/S3P-SDK#readme"
-issues = "https://github.com/CuberHuber/S3P-SDK/issues"
 
 keywords = ["s3 platform", "s3p", "sdk", "microservices", "plugins"]
 
