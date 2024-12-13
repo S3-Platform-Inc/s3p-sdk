@@ -1,4 +1,4 @@
-from s3p_sdk.types import S3PPlugin
+from s3p_sdk.types import S3PPlugin, S3PDocument
 
 
 class S3PPluginPayloadError(Exception):
@@ -39,3 +39,25 @@ class S3PPluginParserFinish(Exception):
         stopped working
         description: {self.message}.
         """
+
+
+class S3PPluginParserOutOfRestrictionException(Exception):
+    """Error raised when found material is out of plugin restrictions"""
+
+    def __init__(self, plugin: S3PPlugin, material: S3PDocument, restriction: str, errors=None):
+        super().__init__()
+        self.plugin = plugin
+        self.material = material
+        self.restriction = restriction
+        self.errors = errors
+        self.message = self._message()
+
+    def _message(self) -> str:
+        return f"""
+        Plugin {self.plugin.repository} 
+        found material: {self.material}
+        that out of restriction: {self.restriction}.
+        """
+
+    def __repr__(self):
+        return self.message

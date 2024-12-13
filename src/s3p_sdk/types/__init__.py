@@ -8,6 +8,7 @@ from .role import S3PRole
 from .user import S3PUser
 from .export import S3PExport
 from .score import S3PScore
+from .plugin_restrictions import S3PPluginRestrictions
 
 
 __all__ = [
@@ -21,4 +22,5 @@ __all__ = [
     "S3PUser",
     "S3PExport",
     "S3PScore",
+    "S3PPluginRestrictions"
 ]

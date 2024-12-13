@@ -6,6 +6,7 @@ __all__ = [
     'MiddlewareConfig',
     'PayloadConfig',
     'PluginConfig',
+    "RestrictionsConfig",
     'modules',
     'payload',
     'trigger'
@@ -18,6 +19,7 @@ from .taskconfig import TaskConfig
 from .coreconfig import CoreConfig
 from .middlewareconfig import MiddlewareConfig
 from .payload import PayloadConfig
+from .restrictconfig import RestrictionsConfig
 
 
 @dataclasses.dataclass

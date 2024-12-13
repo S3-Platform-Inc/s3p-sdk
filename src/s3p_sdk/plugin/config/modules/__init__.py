@@ -4,6 +4,7 @@ from .cut_junk_characters_from_doc_text import CutJunkCharactersFromDocumentText
 from .timezone_safe_control import TimezoneSafeControlConfig
 from .save_document import SaveDocument
 from .filter_only_new_document import FilterOnlyNewDocumentWithDB
+from .save_only_new_documents import SaveOnlyNewDocuments
 
 __all__ = [
     "AbcModuleConfig",
@@ -11,4 +12,5 @@ __all__ = [
     "TimezoneSafeControlConfig",
     "FilterOnlyNewDocumentWithDB",
     "SaveDocument",
+    "SaveOnlyNewDocuments",
 ]
