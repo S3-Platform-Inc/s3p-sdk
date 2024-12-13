@@ -31,7 +31,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          poetry install  # Install dependencies using Poetry
+          poetry install --with test # Install dependencies using Poetry
 
       - name: Run config tests
         run: |
