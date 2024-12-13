@@ -1,8 +1,5 @@
-import logging
-
 import pytest
 import datetime
-import logging
 import time
 from datetime import datetime
 from typing import Callable
@@ -15,9 +12,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.ui import WebDriverWait
 
-from s3p_sdk.plugin.config.type import SOURCE
+from s3p_sdk.plugin.types import SOURCE
 from s3p_sdk.plugin.payloads.parsers import S3PParserBase
-from s3p_sdk.types import S3PRefer, S3PDocument, S3PPlugin
+from s3p_sdk.types import S3PRefer, S3PDocument, S3PPlugin, S3PPluginRestrictions
 
 
 class TestParserMaker:
@@ -26,9 +23,8 @@ class TestParserMaker:
         NEWS_TYPE: str = 'NEWS'
         PUBLICATION_TYPE: str = 'PUBS'
 
-        def __init__(self, refer: S3PRefer, webdriver: WebDriver, url: str, max_count_documents: int = None,
-                     last_document: S3PDocument = None):
-            super().__init__(refer, S3PPlugin(None, "1", True, None, None, SOURCE), max_count_documents, last_document)
+        def __init__(self, refer: S3PRefer, webdriver: WebDriver, url: str, restrictions: S3PPluginRestrictions):
+            super().__init__(refer, S3PPlugin(None, "1", True, None, None, SOURCE, None), restrictions)
             self._driver = webdriver
             self._wait = WebDriverWait(self._driver, timeout=20)
             if url:
@@ -186,8 +182,9 @@ class TestParserMaker:
     def test_make_parser(self, caplog):
         ref = S3PRefer(1, "nist", "SOURCE", None)
         url = 'https://www.nist.gov/news-events/news/search?key=&topic-op=or&topic-area-fieldset%5B%5D=249421'
-        m = self.MyNistParser(ref, self.driver(), url, 10)
+        m = self.MyNistParser(ref, self.driver(), url, S3PPluginRestrictions(10, None, None, None))
         print(m)
+        assert m
 
     # def test_get_parser_content(self):
     #     ref = S3PRefer(1, "nist", "SOURCE", None)

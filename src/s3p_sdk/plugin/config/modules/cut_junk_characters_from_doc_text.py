@@ -34,7 +34,5 @@ class CutJunkCharactersFromDocumentTextConfig(AbcModuleConfig):
         static_fields = ["text", "title", "abstract"]
         if fields:
             assert 0 <= len(fields) <= len(static_fields)
-            print(fields)
             for field in fields:
-                print(field)
                 assert field in static_fields
