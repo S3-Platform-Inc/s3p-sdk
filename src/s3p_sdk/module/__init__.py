@@ -16,6 +16,7 @@ WebDriver: str = 'WebDriver'
 TimezoneSafeControl: str = 'TimezoneSafeControl'
 CutJunkCharactersFromDocumentText: str = 'CutJunkCharactersFromDocumentText'
 FilterOnlyNewDocumentWithDB: str = 'FilterOnlyNewDocumentWithDB'
+SaveOnlyNewDocuments: str = 'SaveOnlyNewDocuments'
 SaveDocument: str = 'SaveDocumentToDB'
 
 names = (
@@ -23,5 +24,6 @@ names = (
     TimezoneSafeControl,
     CutJunkCharactersFromDocumentText,
     FilterOnlyNewDocumentWithDB,
+    SaveOnlyNewDocuments,
     SaveDocument,
 )
