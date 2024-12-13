@@ -41,7 +41,7 @@ class S3PParserBase(S3PPayloadBase, AbcS3PParserExtends):
         A method of checking that the number of documents has exceeded the maximum number or the found document is
         equal to the last document.
 
-        Also, this method checking date restrictions.
+        Also, this method checks date restrictions and determines if the current document is the last required one.
 
         Note for developers:
         This method may raise S3PPluginParserOutOfRestrictionException when a document's publication date
@@ -73,8 +73,16 @@ class S3PParserBase(S3PPayloadBase, AbcS3PParserExtends):
         if self._restriction.to_last_material is not None and self._restriction.to_last_material.hash == document.hash:
             raise S3PPluginParserFinish(self._plugin, f"Find already existing document ({self._restriction.to_last_material.to_logging})")
 
-        if self._restriction.maximum_materials is not None and len(self._parsed_document) >= self._restriction.maximum_materials:
-            raise S3PPluginParserFinish(self._plugin, f"Max count articles reached ({self._restriction.maximum_materials})")
+        is_last_required = False
+        if self._restriction.maximum_materials is not None:
+            if len(self._parsed_document) >= self._restriction.maximum_materials:
+                raise S3PPluginParserFinish(self._plugin, f"Max count articles reached ({self._restriction.maximum_materials})")
+            elif len(self._parsed_document) == self._restriction.maximum_materials - 1:
+                is_last_required = True
 
         self._parsed_document.append(document)
-        self.logger.info(f'Find '+document.to_logging)
+        self.logger.info(f'Find ' + document.to_logging)
+
+        if is_last_required:
+            raise S3PPluginParserFinish(self._plugin,
+                                        f"Last required document added ({self._restriction.maximum_materials})")
