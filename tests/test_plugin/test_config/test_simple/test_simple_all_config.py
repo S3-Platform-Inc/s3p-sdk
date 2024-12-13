@@ -18,6 +18,7 @@ from s3p_sdk.module import (
 )
 
 
+@pytest.mark.config_set
 class TestSimpleAllConfig:
 
     def test_simple_init(self):

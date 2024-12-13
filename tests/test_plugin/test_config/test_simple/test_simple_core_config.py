@@ -1,8 +1,11 @@
+import pytest
+
 from s3p_sdk.plugin.config import CoreConfig
 from s3p_sdk.plugin.config.restrictconfig import RestrictionsConfig
 from s3p_sdk.plugin.types import SOURCE
 
 
+@pytest.mark.config_set
 class TestSimpleCoreConfig:
 
     def test_init(self):
