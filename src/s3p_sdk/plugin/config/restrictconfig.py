@@ -14,7 +14,7 @@ class RestrictionsConfig(AbcObject):
 
     def dict(self) -> dict:
         return {
-            "mex_materials": self.maximum_materials,
+            "max_materials": self.maximum_materials,
             "last_material": self.to_last_material,
             "from_date": self.from_date,
             "to_date": self.to_date,
