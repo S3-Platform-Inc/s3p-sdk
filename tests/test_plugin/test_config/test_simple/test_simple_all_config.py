@@ -79,7 +79,7 @@ class TestSimpleAllConfig:
                 "filenames": ["ieee.py"],
                 "localstorage": False,
                 "restrictions": {
-                    "mex_materials": 50,
+                    "max_materials": 50,
                     "last_material": None,
                     "from_date": None,
                     "to_date": None,
@@ -145,7 +145,7 @@ class TestSimpleAllConfig:
             "filenames": ["ieee.py"],
             "localstorage": False,
             "restrictions": {
-                "mex_materials": None,
+                "max_materials": None,
                 "last_material": None,
                 "from_date": None,
                 "to_date": None,

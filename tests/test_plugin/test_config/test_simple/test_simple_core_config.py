@@ -35,7 +35,7 @@ class TestSimpleCoreConfig:
             "filenames": ["ieee.py"],
             "localstorage": False,
             "restrictions": {
-                "mex_materials": None,
+                "max_materials": None,
                 "last_material": None,
                 "from_date": None,
                 "to_date": None,
