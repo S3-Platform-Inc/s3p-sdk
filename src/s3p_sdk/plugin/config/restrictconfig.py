@@ -16,6 +16,6 @@ class RestrictionsConfig(AbcObject):
         return {
             "max_materials": self.maximum_materials,
             "last_material": self.to_last_material,
-            "from_date": self.from_date,
-            "to_date": self.to_date,
+            "from_date": self.from_date.isoformat() if self.from_date else None,
+            "to_date": self.to_date.isoformat() if self.to_date else None,
         }
