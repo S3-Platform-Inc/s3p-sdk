@@ -6,6 +6,7 @@ It consists different modules: its unique name.
 __all__ = [
     'names',
     'WebDriver',
+    'UndetectedWebdriver',
     'TimezoneSafeControl',
     'CutJunkCharactersFromDocumentText',
     'FilterOnlyNewDocumentWithDB',
@@ -13,6 +14,7 @@ __all__ = [
 ]
 
 WebDriver: str = 'WebDriver'
+UndetectedWebdriver: str = 'UndetectedWebdriver'
 TimezoneSafeControl: str = 'TimezoneSafeControl'
 CutJunkCharactersFromDocumentText: str = 'CutJunkCharactersFromDocumentText'
 FilterOnlyNewDocumentWithDB: str = 'FilterOnlyNewDocumentWithDB'
@@ -21,6 +23,7 @@ SaveDocument: str = 'SaveDocumentToDB'
 
 names = (
     WebDriver,
+    UndetectedWebdriver,
     TimezoneSafeControl,
     CutJunkCharactersFromDocumentText,
     FilterOnlyNewDocumentWithDB,
