@@ -13,12 +13,12 @@ class ConstParamConfig(AbcParamConfig):
     Объект параметра с типом "модуль"
     """
     key: str
-    value: str | int | float | list | dict
+    value: str | int | float | list | dict | bool
     typeof: str = 'const'
 
-    def __init__(self, key: str, value: str | int | float | list | dict):
+    def __init__(self, key: str, value: str | int | float | list | dict | bool):
         assert isinstance(key, str) and len(key) > 0
-        assert type(value) in (int, float, list, dict, str)
+        assert type(value) in (int, float, list, dict, str, bool)
         self.key = key
         self.value = value
 

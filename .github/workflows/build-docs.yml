@@ -1,11 +1,11 @@
 name: Build documentation
 
 on:
-  push:
-    branches:
-      - patch-*
-      - main
-  workflow_dispatch:
+#  push:
+#    branches:
+#      - patch-*
+#      - main
+#  workflow_dispatch:
 
 permissions:
   id-token: write
