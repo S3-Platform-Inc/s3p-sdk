@@ -26,7 +26,7 @@ class S3PParserBase(S3PPayloadBase, AbcS3PParserExtends):
         except S3PPluginParserFinish as e:
             self.logger.debug(str(e))
         except Exception as e:
-            er = S3PPluginPayloadError(self._plugin, "Parsing stopped with error", e)
+            er = S3PPluginPayloadError(self._plugin, f"Parsing stopped with error: {e}", e)
             self.logger.error(str(er))
             raise er from e
         else:
