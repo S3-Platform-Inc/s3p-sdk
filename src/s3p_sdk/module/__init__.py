@@ -12,6 +12,7 @@ __all__ = [
     'FilterOnlyNewDocumentWithDB',
     'SaveDocument',
     "AssetRepository",
+    "TemporaryRepository"
 ]
 
 WebDriver: str = 'WebDriver'
@@ -22,6 +23,7 @@ FilterOnlyNewDocumentWithDB: str = 'FilterOnlyNewDocumentWithDB'
 SaveOnlyNewDocuments: str = 'SaveOnlyNewDocuments'
 SaveDocument: str = 'SaveDocumentToDB'
 AssetRepository: str = 'AssetRepository'
+TemporaryRepository: str = 'TemporaryRepository'
 
 names = (
     WebDriver,
@@ -32,4 +34,5 @@ names = (
     SaveOnlyNewDocuments,
     SaveDocument,
     AssetRepository,
+    TemporaryRepository,
 )
