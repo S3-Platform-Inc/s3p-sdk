@@ -25,6 +25,7 @@ keywords = ["s3 platform", "s3p", "sdk", "microservices", "plugins"]
 [tool.poetry.dependencies]
 python = "^3.11"
 psycopg2-binary = "2.9.9"
+multipledispatch = "^1.0.0"
 
 [tool.poetry.group.dev]
 optional = true

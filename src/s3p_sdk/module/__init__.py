@@ -11,6 +11,7 @@ __all__ = [
     'CutJunkCharactersFromDocumentText',
     'FilterOnlyNewDocumentWithDB',
     'SaveDocument',
+    "AssetRepository",
 ]
 
 WebDriver: str = 'WebDriver'
@@ -20,6 +21,7 @@ CutJunkCharactersFromDocumentText: str = 'CutJunkCharactersFromDocumentText'
 FilterOnlyNewDocumentWithDB: str = 'FilterOnlyNewDocumentWithDB'
 SaveOnlyNewDocuments: str = 'SaveOnlyNewDocuments'
 SaveDocument: str = 'SaveDocumentToDB'
+AssetRepository: str = 'AssetRepository'
 
 names = (
     WebDriver,
@@ -29,4 +31,5 @@ names = (
     FilterOnlyNewDocumentWithDB,
     SaveOnlyNewDocuments,
     SaveDocument,
+    AssetRepository,
 )
