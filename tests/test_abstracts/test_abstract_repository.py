@@ -1,22 +1,28 @@
-from abc import ABC, abstractmethod
+import pytest
+
 from multipledispatch import dispatch
 
+from s3p_sdk.abstracts.abstract_repository import AbstaractRepository
 from s3p_sdk.types import S3PPlugin, S3PDocument
 
 
-class AbstaractRepository(ABC):
-    _plugin: S3PPlugin
+class Repository(AbstaractRepository):
 
     @dispatch(S3PDocument)
-    @abstractmethod
     def has(self, document: S3PDocument) -> bool:
         ...
 
     @dispatch(S3PDocument, str)
-    @abstractmethod
     def has(self, document: S3PDocument, asset: str) -> bool:
         ...
 
-    @abstractmethod
     def open(self, document: S3PDocument, filename: str, **kwargs):
         ...
+
+
+class TestAbstaractRepository():
+    _plugin: S3PPlugin
+
+    def test_subclass(self):
+        r = Repository()
+        assert r
