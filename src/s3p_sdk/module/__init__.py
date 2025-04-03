@@ -12,7 +12,9 @@ __all__ = [
     'FilterOnlyNewDocumentWithDB',
     'SaveDocument',
     "AssetRepository",
-    "TemporaryRepository"
+    "TemporaryRepository",
+    "DownloadDocumentsAssetWithSelenium",
+    "UploadToS3",
 ]
 
 WebDriver: str = 'WebDriver'
@@ -24,6 +26,8 @@ SaveOnlyNewDocuments: str = 'SaveOnlyNewDocuments'
 SaveDocument: str = 'SaveDocumentToDB'
 AssetRepository: str = 'AssetRepository'
 TemporaryRepository: str = 'TemporaryRepository'
+DownloadDocumentsAssetWithSelenium = 'DownloadDocumentsAssetWithSelenium'
+UploadToS3 = 'UploadToS3'
 
 names = (
     WebDriver,
@@ -35,4 +39,6 @@ names = (
     SaveDocument,
     AssetRepository,
     TemporaryRepository,
+    DownloadDocumentsAssetWithSelenium,
+    UploadToS3,
 )
