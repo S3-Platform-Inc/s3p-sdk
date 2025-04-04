@@ -15,3 +15,4 @@ class UploadToS3(AbcModuleConfig):
         self.order = order
         self.name = MNAME
         self.is_critical = is_critical
+        self.parameters = None
