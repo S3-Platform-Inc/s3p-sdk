@@ -15,6 +15,7 @@ __all__ = [
     "TemporaryRepository",
     "DownloadDocumentsAssetWithSelenium",
     "UploadToS3",
+    "ExtractTextFromFile",
 ]
 
 WebDriver: str = 'WebDriver'
@@ -28,6 +29,7 @@ AssetRepository: str = 'AssetRepository'
 TemporaryRepository: str = 'TemporaryRepository'
 DownloadDocumentsAssetWithSelenium = 'DownloadDocumentsAssetWithSelenium'
 UploadToS3 = 'UploadToS3'
+ExtractTextFromFile = 'ExtractTextFromFile'
 
 names = (
     WebDriver,
@@ -41,4 +43,5 @@ names = (
     TemporaryRepository,
     DownloadDocumentsAssetWithSelenium,
     UploadToS3,
+    ExtractTextFromFile,
 )
